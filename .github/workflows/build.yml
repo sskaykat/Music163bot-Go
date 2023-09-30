@@ -23,7 +23,7 @@ jobs:
       - name: Build
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
-          bash build.sh
+          GOOS=windows GOARCH=amd64 bash build.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
