@@ -23,9 +23,9 @@ jobs:
       - name: Build
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
-          GOOS=windows bash build.sh
+          bash build.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Music163bot-Go.exe
+          name: Music163bot-Go
           path: Music163bot-Go
